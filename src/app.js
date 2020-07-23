@@ -46,18 +46,42 @@ function renderPatty() {
 }
 
 function renderCheese() {
+  let cheese = document.querySelector("#cheese");
+  if (state.Cheese) {
+    cheese.style.display = "inherit";
+  } else {
+    cheese.style.display = "none";
+  }
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
 }
 
 function renderTomatoes() {
+  let tomatoes = document.querySelector("#tomato");
+  if (state.Tomatoes) {
+    tomatoes.style.display = "inherit";
+  } else {
+    tomatoes.style.display = "none";
+  }
   //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
 }
 
 function renderOnions() {
+  let onions = document.querySelector("#onion");
+  if (state.Onions) {
+    onions.style.display = "inherit";
+  } else {
+    onions.style.display = "none";
+  }
   //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
 }
 
 function renderLettuce() {
+  let lettuce = document.querySelector("#lettuce");
+  if (state.Lettuce) {
+    lettuce.style.display = "inherit";
+  } else {
+    lettuce.style.display = "none";
+  }
   //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
 }
 
@@ -66,6 +90,25 @@ document.querySelector(".btn-patty").onclick = function () {
   renderAll();
 };
 
+document.querySelector(".btn-cheese").onclick = function () {
+  state.Cheese = !state.Cheese;
+  renderAll();
+}
+
+document.querySelector(".btn-tomatoes").onclick = function () {
+  state.Tomatoes = !state.Tomatoes;
+  renderAll();
+}
+
+document.querySelector(".btn-onions").onclick = function () {
+  state.Onions = !state.Onions;
+  renderAll();
+}
+
+document.querySelector(".btn-lettuce").onclick = function () {
+  state.Lettuce = !state.Lettuce;
+  renderAll();
+}
 // Trial 2 - Setup event listener for the cheese button
 
 
